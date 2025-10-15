@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website-Name - Digital Marketing Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/allpages.css">
+<style>
+    /* ✅ Header Section */
+#header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  width: 100%;
+  padding: 10px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ✅ Flex layout */
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ✅ Logo + Site Name */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 80px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.logo .site-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ✅ Navigation Menu */
+#navMenu {
+  flex-grow: 1;
+}
+
+#navMenu ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navMenu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#navMenu ul li a:hover{
+  color: #ffd700;
+}
+
+/* ✅ Mobile Toggle Button */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ✅ Mobile Responsive Styles */
+@media (max-width: 768px) {
+  #navMenu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+  }
+
+  #navMenu ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 20px 0;
+  }
+
+  #navMenu ul.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+}
+    /* Hero Section */
+        #hero {
+            max-width: 100%;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            background: url('./assets/digital.jpg') center/cover no-repeat fixed;
+            height: 20vh !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        <style>
+#header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  width: 100%;
+  padding: 10px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-start; /* align items from left to right */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ✅ Logo and Site Name */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* gap between logo and name */
+  margin-right: 80px; /* ✅ adds space after the name before nav starts */
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.logo .site-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ✅ Navigation */
+#navMenu {
+  flex-grow: 1; /* takes remaining space */
+}
+
+#navMenu ul {
+  display: flex;
+  justify-content: flex-start; /* keeps list after name */
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navMenu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#navMenu ul li a:hover {
+  color: #ffd700;
+}
+
+/* ✅ Mobile toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #navMenu ul {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+    <!-- ✅ HEADER -->
+<header id="header">
+  <div class="header-container">
+    <div class="logo">
+      <!-- <img src="assets/logo.png" alt="Website Logo"> -->
+      <span class="site-name">Website Name</span>
+    </div>
+
+    <nav id="navMenu">
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="web-Designs.html">Web Design</a></li>
+        <li><a href="web-Development.html">Web Development</a></li>
+        <li><a href="digital-Marketing.html">Digital Marketing</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="visible">
+        <div class="hero-content">
+            <h1>Digital Marketing Services</h1>
+            <div class="breadcrumbtxt"><a href="Index.html">Home</a> » <a href="#">Services</a> » Digital Marketing Services</div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section id="main-content" class="visible">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="content">
+                        <h2 class="text-organe mb-3">Evolution of Business</h2>
+                        <p class="text-justify">In today’s fast-paced world, embracing digital marketing is essential for business growth. Your brand’s journey to success starts with a strong digital presence.</p>
+                        <h2 class="text-organe mb-3">Introducing Website-Name</h2>
+                        <p class="text-justify">Website-Name isn’t just a digital marketing company — since 2014, we’ve been driving brand growth through proven strategies and a strong track record of successful projects. Our team is dedicated to bringing your brand to life and guiding it toward lasting success.</p>
+                        <div class="aboutDivBtn" style="margin: 0px;">
+                            <a href="tel:+91xxxxxxxx" class="btn">Call Us Now</a>
+                            <a href="Contact.html" class="btn">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="imgs radius-rt">
+                        <video autoplay muted loop playsinline style="width:100%; border-radius:10px;">
+      <source src="assets/video1.mp4" type="video/mp4" alt="Embrace Digital Marketing" title="Embrace Digital Marketing">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="visible">
+        <div class="container mt-5" data-aos="fade-left" data-aos-duration="2000">
+            <h2 class="text-organe mb-3">Digital Marketing <span class="subheader">Services at </span> a Glance</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="gridBoxStyle bg-about">
+                        <i class="fa fa-search themeColor" aria-hidden="true"></i>
+                        <h4>SEO Services</h4>
+                        <p>Elevate your online presence with our advanced SEO techniques, ensuring higher rankings and increased visibility across major search engines.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gridBoxStyle bg-greyer">
+                        <i class="fa fa-mouse-pointer themeColor" aria-hidden="true"></i>
+                        <h4>PPC Services</h4>
+                        <p>Ignite rapid growth with our trailblazing PPC campaigns, optimizing your investment for maximum returns.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gridBoxStyle bg-about">
+                        <i class="fa fa-envelope themeColor" aria-hidden="true"></i>
+                        <h4>Email Marketing</h4>
+                        <p>Keep your audience engaged and coming back for more with our cost-effective and impactful email marketing tactics.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gridBoxStyle bg-greyer">
+                        <i class="fa fa-file-word themeColor" aria-hidden="true"></i>
+                        <h4>Content Writing</h4>
+                        <p>Our skilled content creators craft compelling narratives that captivate audiences and drive meaningful interactions, all while aligning with Google's RankBrain algorithm.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gridBoxStyle bg-about">
+                        <i class="fa fa-bullhorn themeColor" aria-hidden="true"></i>
+                        <h4>Social Media Marketing</h4>
+                        <p>Amplify your brand's voice and expand your reach with our cutting-edge social media optimization strategies.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gridBoxStyle bg-greyer">
+                        <i class="fa fa-check-square themeColor" aria-hidden="true"></i>
+                        <h4>Conversion Rate Optimization</h4>
+                        <p>Convert casual visitors into loyal customers with our expertly crafted conversion optimization techniques.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gridBoxStyle bg-about">
+                        <i class="fa fa-globe themeColor" aria-hidden="true"></i>
+                        <h4>Influencer Marketing</h4>
+                        <p>Harness the power of influencers to amplify your brand's message and reach a wider audience, all while maintaining authenticity and relevance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gridBoxStyle bg-greyer">
+                        <i class="fa fa-video themeColor" aria-hidden="true"></i>
+                        <h4>Video Marketing</h4>
+                        <p>Ride the wave of the video marketing revolution with our exclusive video content creation services, designed to leave a lasting impact on your audience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gridBoxStyle bg-about">
+                        <i class="fas fa-chart-line themeColor" aria-hidden="true"></i>
+                        <h4>Affiliate Marketing</h4>
+                        <p>Forge profitable partnerships and expand your reach through our meticulously curated affiliate marketing programs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gridBoxStyle bg-greyer">
+                        <i class="fa fa-paper-plane themeColor" aria-hidden="true"></i>
+                        <h4>Growth Hacking</h4>
+                        <p>Supercharge your brand's growth with our innovative growth hacking strategies, designed to unlock exponential growth opportunities.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gridBoxStyle bg-about">
+                        <i class="fa fa-desktop themeColor" aria-hidden="true"></i>
+                        <h4>Data Optimization</h4>
+                        <p>In the realm of digital marketing, optimizing <a href="customer.html" style="text-decoration: none;">client data</a> is akin to refining a raw gemstone, unveiling its true brilliance. With meticulous analysis and strategic implementation.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gridBoxStyle bg-greyer">
+                        <i class="far fa-file-code themeColor" aria-hidden="true"></i>
+                        <h4>Web Design and Development</h4>
+                        <p>Stand out in the digital crowd with our top-notch website design and development services, tailored to reflect the essence of your brand and captivate your audience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutDivBtn text-center" style="margin-top: 20px;">
+                <a href="tel:+91xxxxxxxxxx" class="btn">Call Us Now</a>
+                <a href="Contact.html" class="btn">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <footer id="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>About Website Name</h5>
+                    <p>Empowering businesses with AI-driven innovation and cutting-edge digital solutions since day one.</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#digital-marketing-grid">Marketing</a></li>
+                        <li><a href="#global">Global Presence</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@websitename.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Global Headquarters</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Website Name. All rights reserved. | Innovating Tomorrow, Today.</p>
+            </div>
+        </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Sticky header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations for sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => observer.observe(section));
+    </script>
+    <script>
+  const navToggle = document.getElementById("navToggle");
+  const navMenu = document.getElementById("navMenu").querySelector("ul");
+
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+
+  // Optional: close menu when a link is clicked
+  navMenu.querySelectorAll("a").forEach(link =>
+    link.addEventListener("click", () => navMenu.classList.remove("show"))
+  );
+</script>
+</body>
+</html>

@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Website Name Soft Technologies - Empowering Businesses with AI-Driven Innovation and Cutting-Edge Digital Solutions"
+    />
+    <meta
+      name="keywords"
+      content="AI, Digital Solutions, Web Development, CRM, E-Commerce, Digital Marketing"
+    />
+    <title>Website Name - AI-Powered Digital Solutions</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <style>
+      #header {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+        width: 100%;
+        padding: 10px 40px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: flex-start; /* align items from left to right */
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* ✅ Logo and Site Name */
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px; /* gap between logo and name */
+        margin-right: 80px; /* ✅ adds space after the name before nav starts */
+      }
+
+      .logo img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+      }
+
+      .logo .site-name {
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* ✅ Navigation */
+      #navMenu {
+        flex-grow: 1; /* takes remaining space */
+      }
+
+      #navMenu ul {
+        display: flex;
+        justify-content: flex-start; /* keeps list after name */
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      #navMenu ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      #navMenu ul li a:hover {
+        color: #ffd700;
+      }
+
+      /* ✅ Mobile toggle */
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        #navMenu ul {
+          display: none;
+        }
+
+        .nav-toggle {
+          display: block;
+        }
+      }
+      @media (max-width: 768px) {
+  #navMenu {
+    position: absolute;
+    top: 70px; /* below header */
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+  }
+
+  #navMenu ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 20px 0;
+  }
+
+  #navMenu ul.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header id="header">
+        <div class="header-container">
+          <div class="logo">
+            <!-- <img src="assets/logo.png" alt="Website Logo"> -->
+            <span class="site-name">Website Name</span>
+          </div>
+
+          <nav id="navMenu">
+            <ul>
+              <li><a href="Index.html">Home</a></li>
+              <li><a href="web-Designs.html">Web Design</a></li>
+              <li><a href="web-Development.html">Web Development</a></li>
+              <li><a href="digital-Marketing.html">Digital Marketing</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <button class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </header>
+      <!-- Hero Video Section -->
+      <section id="hero">
+        <video
+          class="video-slide"
+          src="assets\WhatsApp Video.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+        <!-- <div class="hero-overlay"></div> -->
+        <div class="hero-content">
+          <h1 id="hero-title"></h1>
+          <p class="intro" id="hero-subtitle"></p>
+        </div>
+      </section>
+
+      <!-- Services Flip Cards Section
+        <section class="services-flip" id="services-flip" class="section">
+            <h2>Our Services</h2>
+            <p>From responsive web design to robust CRM and AI-powered applications, we deliver comprehensive digital solutions tailored to your business needs with cutting-edge technology.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <h5><i class="fas fa-laptop-code"></i>Web Designing</h5>
+                        </div>
+                        <div class="service-back">Create stunning, responsive websites tailored to your brand identity and user experience.</div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <h5><i class="fas fa-users-cog"></i>CRM Development</h5>
+                        </div>
+                        <div class="service-back">Custom CRM solutions to streamline customer relationships and improve business efficiency.</div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <h5><i class="fas fa-shopping-cart"></i>E-Commerce</h5>
+                        </div>
+                        <div class="service-back">Build powerful online stores with secure payment integrations and inventory management.</div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <h5><i class="fab fa-wordpress"></i>WordPress</h5>
+                        </div>
+                        <div class="service-back">Fast and flexible WordPress sites with custom themes and optimized performance.</div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <h5><i class="fas fa-cogs"></i>Custom Applications</h5>
+                        </div>
+                        <div class="service-back">Bespoke software applications engineered to meet your unique business requirements.</div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <h5><i class="fas fa-robot"></i>AI Solutions</h5>
+                        </div>
+                        <div class="service-back">Innovative AI-driven applications that automate processes and drive business growth.</div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <h5><i class="fas fa-mobile-alt"></i>Mobile Apps</h5>
+                        </div>
+                        <div class="service-back">Native and cross-platform mobile applications for iOS and Android platforms.</div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <h5><i class="fas fa-cloud"></i>Cloud Solutions</h5>
+                        </div>
+                        <div class="service-back">Scalable cloud infrastructure and deployment solutions for modern businesses.</div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <h5><i class="fas fa-chart-line"></i>Analytics</h5>
+                        </div>
+                        <div class="service-back">Data-driven insights and analytics to optimize your business performance.</div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+      <!-- Services Column Expand Section -->
+      <section class="services-column" id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="service-columns">
+          <div class="column">
+            <div class="service-card">
+              <h3><span class="icon">📱</span>Web Designing</h3>
+              <div class="expand-content">
+                Create stunning, responsive websites tailored to your brand.
+              </div>
+            </div>
+            <div class="service-card">
+              <h3><span class="icon">🗞️</span>WordPress</h3>
+              <div class="expand-content">
+                Fast and flexible WordPress sites with custom themes.
+              </div>
+            </div>
+            <div class="service-card">
+              <h3><span class="icon">📘</span>Social Media Promotions</h3>
+              <div class="expand-content">
+                Engage your audience on social platforms with expert campaigns.
+              </div>
+            </div>
+            <div class="service-card">
+              <h3><span class="icon">✏️</span>Content Writing & Branding</h3>
+              <div class="expand-content">
+                Craft compelling stories that define your brand identity.
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="service-card">
+              <h3><span class="icon">👥</span>CRM Development</h3>
+              <div class="expand-content">
+                Custom CRM solutions to streamline your customer relationships.
+              </div>
+            </div>
+            <div class="service-card">
+              <h3><span class="icon">⚙️</span>Custom Applications</h3>
+              <div class="expand-content">
+                Bespoke software applications to meet your unique needs.
+              </div>
+            </div>
+            <div class="service-card">
+              <h3>
+                <span class="icon">🎥</span>YouTube Promotions & Podcasting
+              </h3>
+              <div class="expand-content">
+                Boost your video and audio content reach effectively.
+              </div>
+            </div>
+            <div class="service-card">
+              <h3><span class="icon">🎨</span>Logo & Graphic Design</h3>
+              <div class="expand-content">
+                Eye-catching visuals that capture your essence.
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="service-card">
+              <h3><span class="icon">🛒</span>E-commerce</h3>
+              <div class="expand-content">
+                Build powerful online stores with secure payment integrations.
+              </div>
+            </div>
+            <div class="service-card">
+              <h3>
+                <span class="icon">📣</span>Digital Promotions & Marketing
+              </h3>
+              <div class="expand-content">
+                Drive growth with targeted digital marketing strategies.
+              </div>
+            </div>
+            <div class="service-card">
+              <h3>
+                <span class="icon">🎬</span>Promotional Videos & Motion Graphics
+              </h3>
+              <div class="expand-content">
+                Dynamic videos using After Effects, Premiere Pro, Blender.
+              </div>
+            </div>
+            <div class="service-card">
+              <h3>
+                <span class="icon">🤖</span>AI-Based App & Software Solutions
+              </h3>
+              <div class="expand-content">
+                Innovative AI-driven applications for the future.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section class="section" id="process">
+        <h2>Our Process</h2>
+        <div class="gears-container">
+          <div class="gear">Analyze</div>
+          <div class="gear">Plan</div>
+          <div class="gear">Design</div>
+          <div class="gear">Develop</div>
+          <div class="gear">Test</div>
+          <div class="gear">Launch</div>
+          <div class="gear">Support</div>
+        </div>
+      </section>
+
+      <!-- Digital Marketing Grid Section -->
+      <section id="digital-marketing-grid">
+        <h2>Digital Marketing</h2>
+        <div class="marketing-grid-layout">
+          <!-- Row 1 -->
+          <div
+            class="grid-item content-card"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
+            <h3>SEARCH ENGINE OPTIMIZATION</h3>
+            <p>
+              Boost your search rankings and organic traffic with AI-powered SEO
+              and proven optimization strategies.
+            </p>
+          </div>
+
+          <div
+            class="grid-item image-card"
+            data-aos="fade-down"
+            data-aos-duration="1500"
+          >
+            <div class="img-placeholder">
+              <svg width="250" height="200" viewBox="0 0 250 200">
+                <rect
+                  x="40"
+                  y="60"
+                  width="60"
+                  height="80"
+                  fill="#ff6b6b"
+                  rx="5"
+                />
+                <rect
+                  x="110"
+                  y="40"
+                  width="60"
+                  height="100"
+                  fill="#4ecdc4"
+                  rx="5"
+                />
+                <rect
+                  x="180"
+                  y="20"
+                  width="60"
+                  height="120"
+                  fill="#45b7d1"
+                  rx="5"
+                />
+                <circle cx="220" cy="50" r="25" fill="#f7b731" opacity="0.8" />
+                <text
+                  x="225"
+                  y="55"
+                  font-size="20"
+                  fill="white"
+                  text-anchor="middle"
+                >
+                  SEO
+                </text>
+                <circle
+                  cx="200"
+                  cy="160"
+                  r="30"
+                  fill="none"
+                  stroke="#e74c3c"
+                  stroke-width="3"
+                />
+                <line
+                  x1="220"
+                  y1="180"
+                  x2="240"
+                  y2="200"
+                  stroke="#e74c3c"
+                  stroke-width="3"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div
+            class="grid-item content-card"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
+            <h3>SOCIAL MEDIA MARKETING</h3>
+            <p>
+              Build meaningful connections with AI-driven social media marketing
+              that covers content creation to community management.
+            </p>
+          </div>
+
+          <!-- Row 2 -->
+          <div
+            class="grid-item image-card"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
+            <div class="img-placeholder">
+              <svg width="250" height="200" viewBox="0 0 250 200">
+                <rect
+                  x="100"
+                  y="40"
+                  width="80"
+                  height="100"
+                  fill="#3498db"
+                  rx="8"
+                />
+                <circle cx="90" cy="30" r="15" fill="#e74c3c" />
+                <circle cx="160" cy="30" r="15" fill="#f39c12" />
+                <circle cx="70" cy="90" r="15" fill="#9b59b6" />
+                <circle cx="180" cy="90" r="15" fill="#1abc9c" />
+                <circle cx="125" cy="160" r="15" fill="#e67e22" />
+                <path
+                  d="M 125 60 L 125 120"
+                  stroke="white"
+                  stroke-width="3"
+                  fill="none"
+                />
+                <circle cx="140" cy="90" r="20" fill="#f1c40f" />
+                <text
+                  x="140"
+                  y="95"
+                  font-size="16"
+                  fill="#333"
+                  text-anchor="middle"
+                >
+                  📱
+                </text>
+              </svg>
+            </div>
+          </div>
+
+          <div
+            class="grid-item content-card"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <h3>PAID MARKETING (PPC)</h3>
+            <p>
+              Drive targeted traffic and generate leads with AI-optimized PPC
+              campaigns designed for maximum ROI.
+            </p>
+          </div>
+
+          <div
+            class="grid-item image-card"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
+            <div class="img-placeholder">
+              <svg width="250" height="200" viewBox="0 0 250 200">
+                <rect
+                  x="60"
+                  y="50"
+                  width="140"
+                  height="100"
+                  fill="white"
+                  stroke="#3498db"
+                  stroke-width="3"
+                  rx="5"
+                />
+                <rect
+                  x="70"
+                  y="65"
+                  width="50"
+                  height="30"
+                  fill="#e74c3c"
+                  rx="3"
+                />
+                <text
+                  x="95"
+                  y="85"
+                  font-size="16"
+                  fill="white"
+                  text-anchor="middle"
+                >
+                  AD
+                </text>
+                <circle cx="170" cy="80" r="8" fill="#f39c12" />
+                <circle cx="170" cy="100" r="8" fill="#9b59b6" />
+                <circle cx="170" cy="120" r="8" fill="#1abc9c" />
+                <path
+                  d="M 80 165 Q 125 130 170 165"
+                  stroke="#27ae60"
+                  stroke-width="3"
+                  fill="none"
+                />
+                <circle cx="180" cy="40" r="12" fill="#f1c40f" />
+                <text x="180" y="45" font-size="14">💰</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div
+            class="grid-item content-card"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
+            <h3>INFLUENCER MARKETING</h3>
+            <p>
+              Amplify your brand's reach and credibility with AI-powered
+              influencer identification and strategic collaborations.
+            </p>
+          </div>
+
+          <div
+            class="grid-item image-card"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <div class="img-placeholder">
+              <svg width="250" height="200" viewBox="0 0 250 200">
+                <circle cx="125" cy="70" r="30" fill="#e74c3c" />
+                <circle cx="80" cy="130" r="18" fill="#3498db" />
+                <circle cx="125" cy="150" r="18" fill="#9b59b6" />
+                <circle cx="170" cy="130" r="18" fill="#1abc9c" />
+                <circle cx="60" cy="90" r="18" fill="#f39c12" />
+                <circle cx="190" cy="90" r="18" fill="#e67e22" />
+                <line
+                  x1="125"
+                  y1="100"
+                  x2="80"
+                  y2="112"
+                  stroke="#95a5a6"
+                  stroke-width="2"
+                />
+                <line
+                  x1="125"
+                  y1="100"
+                  x2="125"
+                  y2="132"
+                  stroke="#95a5a6"
+                  stroke-width="2"
+                />
+                <line
+                  x1="125"
+                  y1="100"
+                  x2="170"
+                  y2="112"
+                  stroke="#95a5a6"
+                  stroke-width="2"
+                />
+                <text
+                  x="125"
+                  y="77"
+                  font-size="20"
+                  fill="white"
+                  text-anchor="middle"
+                >
+                  👤
+                </text>
+              </svg>
+            </div>
+          </div>
+
+          <div
+            class="grid-item content-card"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
+            <h3>LEAD GENERATION</h3>
+            <p>
+              Grow your business by attracting and nurturing qualified leads
+              with AI-driven lead generation services.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Global Presence Section -->
+      <section class="section" id="global">
+        <h2>Global Presence</h2>
+        <h3>Local Expertise, Global Reach</h3>
+        <p>
+          We deliver world-class services with deep understanding of local
+          markets. Our team operates seamlessly across borders to ensure your
+          success everywhere.
+        </p>
+
+        <div class="countries-wrapper">
+          <div class="countries-track">
+            <span class="country-tag">🇺🇸 USA</span>
+            <span class="country-tag">🇬🇧 UK</span>
+            <span class="country-tag">🇮🇳 India</span>
+            <span class="country-tag">🇨🇦 Canada</span>
+            <span class="country-tag">🇦🇺 Australia</span>
+            <span class="country-tag">🇩🇪 Germany</span>
+            <span class="country-tag">🇦🇪 UAE</span>
+            <span class="country-tag">🇸🇬 Singapore</span>
+            <span class="country-tag">🇿🇦 South Africa</span>
+            <span class="country-tag">🇧🇷 Brazil</span>
+            <!-- Duplicate for seamless scroll -->
+            <span class="country-tag">🇺🇸 USA</span>
+            <span class="country-tag">🇬🇧 UK</span>
+            <span class="country-tag">🇮🇳 India</span>
+            <span class="country-tag">🇨🇦 Canada</span>
+            <span class="country-tag">🇦🇺 Australia</span>
+            <span class="country-tag">🇩🇪 Germany</span>
+            <span class="country-tag">🇦🇪 UAE</span>
+            <span class="country-tag">🇸🇬 Singapore</span>
+            <span class="country-tag">🇿🇦 South Africa</span>
+            <span class="country-tag">🇧🇷 Brazil</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Markets Section -->
+      <section class="section" id="scalability">
+        <h2>Our Key Markets</h2>
+        <h5 style="text-align: center">
+          Global Presence, Local Expertise Countries Where We Provide Our
+          Services
+        </h5>
+        <div class="btn-group">
+          <a href="#" class="btn-location"
+            ><i class="fas fa-map-marker-alt"></i>India</a
+          >
+          <a href="#" class="btn-location"
+            ><i class="fas fa-map-marker-alt"></i>USA</a
+          >
+          <a href="#" class="btn-location"
+            ><i class="fas fa-map-marker-alt"></i>UK</a
+          >
+        </div>
+        <div class="images-row">
+          <div class="image-col">
+            <img src="assets/india.webp" alt="India" />
+          </div>
+          <div class="image-col">
+            <img src="assets/usa.webp" alt="USA" />
+          </div>
+          <div class="image-col">
+            <img src="assets/uk.webp" alt="UK" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="section" id="why-choose">
+        <h2>Why Choose Website Name?</h2>
+        <p>
+          We stand out in the digital landscape with our commitment to
+          excellence, innovation, and customer success.
+        </p>
+        <div class="why-choose-grid">
+          <div class="why-choose-card">
+            <div class="icon"><i class="fas fa-brain"></i></div>
+            <h4>AI-Powered Solutions</h4>
+            <p>
+              Leverage cutting-edge artificial intelligence to automate and
+              optimize your business processes.
+            </p>
+          </div>
+          <div class="why-choose-card">
+            <div class="icon"><i class="fa-solid fa-users"></i></div>
+            <h4>Expert Team</h4>
+            <p>
+              Our talented professionals bring years of experience across
+              multiple industries and domains.
+            </p>
+          </div>
+          <div class="why-choose-card">
+            <div class="icon"><i class="fas fa-handshake"></i></div>
+            <h4>Client Focused</h4>
+            <p>
+              We prioritize your success with personalized solutions and
+              dedicated support throughout the journey.
+            </p>
+          </div>
+          <div class="why-choose-card">
+            <div class="icon"><i class="fas fa-bolt"></i></div>
+            <h4>Fast Delivery</h4>
+            <p>
+              Get your project completed on time without compromising on quality
+              or innovation.
+            </p>
+          </div>
+          <div class="why-choose-card">
+            <div class="icon"><i class="fas fa-shield-alt"></i></div>
+            <h4>Security First</h4>
+            <p>
+              Your data is protected with enterprise-grade security and
+              compliance standards.
+            </p>
+          </div>
+          <div class="why-choose-card">
+            <div class="icon"><i class="fas fa-chart-line"></i></div>
+            <h4>Proven Results</h4>
+            <p>
+              Track record of delivering measurable business growth and customer
+              satisfaction.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="section" id="testimonials">
+        <h2>Client Testimonials</h2>
+        <p>
+          Hear from our satisfied clients who have experienced transformation
+          with our services.
+        </p>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">A</div>
+              <div>
+                <div class="testimonial-name">Amit Kumar</div>
+                <!-- <div class="testimonial-role">CEO, Tech Startups</div> -->
+              </div>
+            </div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Website Name transformed our business with their innovative
+              digital solutions. Their team's expertise and dedication made all
+              the difference in our success."
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">S</div>
+              <div>
+                <div class="testimonial-name">Sophia Johnson</div>
+                <!-- <div class="testimonial-role">Marketing Director, Global Corp</div> -->
+              </div>
+            </div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Outstanding service and exceptional results! Website Name
+              delivered exactly what we needed within the timeline. Highly
+              recommended!"
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">R</div>
+              <div>
+                <div class="testimonial-name">Rajesh Patel</div>
+                <!-- <div class="testimonial-role">Founder, E-commerce Business</div> -->
+              </div>
+            </div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Our sales increased by 300% after implementing Website Name'
+              digital marketing strategy. They are true professionals!"
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h5>About Website Name</h5>
+            <br />
+            <p style="color: aliceblue">
+              Empowering businesses with AI-driven innovation and cutting-edge
+              digital solutions since day one.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h5>Quick Links</h5>
+            <br />
+            <ul>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#process">Process</a></li>
+              <li><a href="#digital-marketing-grid">Marketing</a></li>
+              <li><a href="#global">Global Presence</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h5>Contact Info</h5>
+            <br />
+            <ul>
+              <li><i class="fas fa-envelope"></i> info@websitename.com</li>
+              <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+              <li><i class="fas fa-map-marker-alt"></i> Global Headquarters</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h5>Follow Us</h5>
+            <div class="social-icons">
+              <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" title="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p style="color: aliceblue">
+            &copy; 2025 Website Name. All rights reserved. | Innovating
+            Tomorrow, Today.
+          </p>
+        </div>
+      </footer>
+
+      <!-- WhatsApp Button -->
+      <a
+        href="https://wa.me/1234567890"
+        class="whatsapp"
+        title="Chat on WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        once: false,
+        mirror: true,
+        anchorPlacement: "top-bottom",
+        offset: 100,
+        duration: 1500,
+      });
+
+      // Mobile menu toggle
+      //const navToggle = document.getElementById("navToggle");
+      //const mobileMenu = document.getElementById("mobileMenu");
+
+      //navToggle.addEventListener("click", () => {
+        //mobileMenu.classList.toggle("active");
+      //});
+
+      //document.querySelectorAll(".mobile-menu a").forEach((link) => {
+        //link.addEventListener("click", () => {
+          //mobileMenu.classList.remove("active");
+        //});
+      //});
+
+      // Header scroll effect
+      window.addEventListener("scroll", () => {
+        const header = document.getElementById("header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Hero typing animation
+      // const titleText = "Build a Brand That Stands Out";
+      // const subtitleText = "Empowering Businesses with AI-Driven Innovation and Cutting-Edge Digital Solutions";
+
+      // function typeText(elementId, text, delay = 100, callback) {
+      //     const element = document.getElementById(elementId);
+      //     let i = 0;
+      //     function typing() {
+      //         if (i < text.length) {
+      //             element.innerHTML += text.charAt(i);
+      //             i++;
+      //             setTimeout(typing, delay);
+      //         } else if (callback) {
+      //             callback();
+      //         }
+      //     }
+      //     typing();
+      // }
+
+      // typeText("hero-title", titleText, 100, () => {
+      //     typeText("hero-subtitle", subtitleText, 50);
+      // });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -60px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Process gears
+            const gears = entry.target.querySelectorAll(".gear");
+            gears.forEach((gear, idx) => {
+              setTimeout(() => gear.classList.add("show"), idx * 100);
+            });
+
+            // Buttons
+            const buttons = entry.target.querySelectorAll(".btn-location");
+            buttons.forEach((btn, idx) => {
+              setTimeout(() => btn.classList.add("show"), idx * 100);
+            });
+
+            // Images
+            const imageCols = entry.target.querySelectorAll(".image-col");
+            imageCols.forEach((col, idx) => {
+              setTimeout(() => col.classList.add("show"), idx * 150);
+            });
+
+            // Why Choose cards
+            const whyChooseCards =
+              entry.target.querySelectorAll(".why-choose-card");
+            whyChooseCards.forEach((card, idx) => {
+              setTimeout(() => card.classList.add("show"), idx * 100);
+            });
+
+            // Testimonials
+            const testimonialCards =
+              entry.target.querySelectorAll(".testimonial-card");
+            testimonialCards.forEach((card, idx) => {
+              setTimeout(() => card.classList.add("show"), idx * 120);
+            });
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".section, footer").forEach((section) => {
+        observer.observe(section);
+      });
+
+      // Process gears animation
+      const gears = document.querySelectorAll("#process .gear");
+      let currentIndex = 0;
+
+      function rotateGears() {
+        gears.forEach((gear) => gear.classList.remove("active"));
+        if (gears[currentIndex]) gears[currentIndex].classList.add("active");
+        currentIndex = (currentIndex + 1) % gears.length;
+      }
+
+      setInterval(rotateGears, 2500);
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href !== "#") {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          }
+        });
+      });
+
+      console.log("Website Name - All Sections Integrated Successfully");
+    </script>
+    <script>
+  const navToggle = document.getElementById("navToggle");
+  const navMenu = document.getElementById("navMenu").querySelector("ul");
+
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+</script>
+
+  </body>
+</html>

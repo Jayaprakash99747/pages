@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website-Name  - Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/allpages.css">
+<style>
+    /* ✅ Header Section */
+#header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  width: 100%;
+  padding: 10px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ✅ Flex layout */
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ✅ Logo + Site Name */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 80px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.logo .site-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ✅ Navigation Menu */
+#navMenu {
+  flex-grow: 1;
+}
+
+#navMenu ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navMenu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#navMenu ul li a:hover{
+  color: #ffd700;
+}
+
+/* ✅ Mobile Toggle Button */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ✅ Mobile Responsive Styles */
+@media (max-width: 768px) {
+  #navMenu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+  }
+
+  #navMenu ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 20px 0;
+  }
+
+  #navMenu ul.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+}
+    /* Hero Section */
+        #hero {
+            max-width: 100%;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            background: url('./assets/contactus.jpg') center/cover no-repeat fixed;
+            height: 20vh !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+            <style>
+#header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  width: 100%;
+  padding: 10px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-start; /* align items from left to right */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ✅ Logo and Site Name */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* gap between logo and name */
+  margin-right: 80px; /* ✅ adds space after the name before nav starts */
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.logo .site-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ✅ Navigation */
+#navMenu {
+  flex-grow: 1; /* takes remaining space */
+}
+
+#navMenu ul {
+  display: flex;
+  justify-content: flex-start; /* keeps list after name */
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navMenu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#navMenu ul li a:hover {
+  color: #ffd700;
+}
+
+/* ✅ Mobile toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #navMenu ul {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+    <!-- ✅ HEADER -->
+<header id="header">
+  <div class="header-container">
+    <div class="logo">
+      <!-- <img src="assets/logo.png" alt="Website Logo"> -->
+      <span class="site-name">Website Name</span>
+    </div>
+
+    <nav id="navMenu">
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="web-Designs.html">Web Design</a></li>
+        <li><a href="web-Development.html">Web Development</a></li>
+        <li><a href="digital-Marketing.html">Digital Marketing</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="visible">
+        <div class="hero-content">
+            <!-- <h1>Contact us</h1>
+            <div class="breadcrumbtxt"><a href="Index.html">Home</a> » Contact us</div> -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="visible">
+        <div class="container pt-3 pb-5">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-duration="2000">
+                            <div class="content">
+                                <div class="contact">
+                                    <div class="location">
+                                        <i class="fas fa-user-cog"></i>
+                                        <h3>Support</h3>
+                                        <span><a href="mailto:info@Website-Nameoftwares.com" style="text-decoration: none; color:black">info@Website-Nameoftwares.com</a></span>
+                                    </div>
+                                    <div class="location d-flex">
+                                        <div>
+                                            <i class="fas fa-map-marker-alt" style="margin-bottom:35px"></i>
+                                        </div>
+                                        <div class="d-flex flex-wrap">
+                                            <h3 style="margin-top:0">Visakhapatnam (B.O)</h3>
+                                            <p>Plot No 148, Sector 8, MVP Colony, near Ushodaya Jn,  Visakhapatnam, Andhra Pradesh 530017</p>
+                                        </div>
+                                    </div>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt" style="margin-bottom:35px"></i>
+                                        <div class="d-flex flex-wrap">
+                                            <h3 style="margin-top:0">Hyderabad (H.O)</h3>
+                                            <p>KPHB , Phase 14 , Near JNTU , Hyderabad , Telangana.</p>
+                                        </div>
+                                    </div>
+                                    <div class="location">
+                                        <i class="fas fa-phone" style="margin-bottom:35px"></i>
+                                        <div class="d-flex flex-wrap">
+                                            <h3 style="margin-top:0">Call Us</h3>
+                                            <p><a href="tel:+918977636483" style="color:black;text-decoration: none;">+91 8977636483</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-left" data-aos-duration="2000">
+                            <div class="contact-box">
+                                <h2 class="text-organe mb-3">Get in <span class="subheader">touch</span></h2>
+                                <form id="contactForm">
+                                    <div class="form-group">
+                                        <input name="name" type="text" class="input" id="name" placeholder="Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="email" type="text" class="input" id="email" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="service" type="text" class="input" id="service" placeholder="Service You Need">
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="organization" type="text" class="input" id="organization" placeholder="Name of Organization">
+                                    </div>
+                                    <div class="form-group phone">
+                                        <input name="organization" type="tel" class="input" id="phone" maxlength="10" placeholder="Phone">
+                                    </div>
+                                    <textarea name="message" id="message" rows="6" placeholder="Enter your Message here"></textarea>
+                                    <input type="button" class="btn submit-btn" id="send" value="Submit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <footer id="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>About Website Name</h5>
+                    <p>Empowering businesses with AI-driven innovation and cutting-edge digital solutions since day one.</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#digital-marketing-grid">Marketing</a></li>
+                        <li><a href="#global">Global Presence</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@websitename.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Global Headquarters</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Website Name. All rights reserved. | Innovating Tomorrow, Today.</p>
+            </div>
+        </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Sticky header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations for sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => observer.observe(section));
+
+        // Menu scroll script
+        $(function() {
+            var header = $(".header");
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 400) {
+                    header.removeClass('header').addClass("sa-header-alt");
+                } else {
+                    header.removeClass("sa-header-alt").addClass('header');
+                }
+            });
+        });
+
+        // Menu bar toggle
+        $(document).ready(function() {
+            $("#menu-icon").click(function() {
+                $(".menu-bar").css("Transform", "translate(0px,0px)");
+                $(".menu-bar").css("Transform-origin", "top bottom");
+                $(".menu-bar").css("Transition", "1s");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#close").click(function() {
+                $(".menu-bar").css("Transform", "translate(0px,-2000px)");
+                $(".menu-bar").css("Transform-origin", "bottom top");
+                $(".menu-bar").css("Transition", "0.4s");
+            });
+        });
+
+        // Share functions
+        function shareonFacebook(){
+            var pageurl=window.location.href;
+            window.open('https://www.facebook.com/sharer/sharer.php?u='+pageurl, 'facebookwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+        }
+        function shareontwitter(){
+            var pageurl=window.location.href;
+            window.open('https://twitter.com/share?url='+pageurl, 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+        }
+        function shareonlinkedin(){
+            var pageurl=window.location.href;
+            window.open('https://www.linkedin.com/shareArticle?mini=true&url='+pageurl, 'linkedinwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+        }
+
+        // Form submission
+        document.getElementById("send").addEventListener("click", function () {
+            const formData = new FormData();
+            formData.append("name", document.getElementById("name").value);
+            formData.append("email", document.getElementById("email").value);
+            formData.append("service", document.getElementById("service").value);
+            formData.append("organization", document.getElementById("organization").value);
+            formData.append("phone", document.getElementById("phone").value);
+            formData.append("message", document.getElementById("message").value);
+
+            fetch("https://script.google.com/macros/s/AKfycbzOE8o8ovx5snESaNVace2IrPJLuFBSX_JpLcRuS3pXTiqleiqBKeHybAxqVGm9KIZI9w/exec", {
+                method: "POST",
+                body: formData,
+            })
+            .then((res) => res.json())
+            .then((data) => {
+                alert("✅ " + data.message);
+                document.getElementById("contactForm").reset();
+            })
+            .catch((err) => {
+                alert("❌ Error submitting form");
+                console.error(err);
+            });
+        });
+    </script>
+    <script>
+  const navToggle = document.getElementById("navToggle");
+  const navMenu = document.getElementById("navMenu").querySelector("ul");
+
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+
+  // Optional: close menu when a link is clicked
+  navMenu.querySelectorAll("a").forEach(link =>
+    link.addEventListener("click", () => navMenu.classList.remove("show"))
+  );
+</script>
+</body>
+</html>

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website-Name - Web Design Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/allpages.css">
+    <style>
+        /* ✅ Header Section */
+#header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  width: 100%;
+  padding: 10px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ✅ Flex layout */
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ✅ Logo + Site Name */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 80px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.logo .site-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ✅ Navigation Menu */
+#navMenu {
+  flex-grow: 1;
+}
+
+#navMenu ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navMenu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#navMenu ul li a:hover{
+  color: #ffd700;
+}
+
+/* ✅ Mobile Toggle Button */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ✅ Mobile Responsive Styles */
+@media (max-width: 768px) {
+  #navMenu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+  }
+
+  #navMenu ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 20px 0;
+  }
+
+  #navMenu ul.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+}
+        /* Hero Section */
+        #hero {
+            max-width: 100%;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            background: url('./assets/Website-designing-in-dehradun-1200x597.jpeg') center/cover no-repeat fixed;
+            height: 20vh !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(30, 60, 114, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        #hero {
+            max-width: 100%;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            background: url('./assets/01.jpg') center/cover no-repeat fixed;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        #hero .hero-content {
+            z-index: 2;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease forwards;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        #hero .breadcrumbtxt {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease 0.3s forwards;
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        #hero .breadcrumbtxt a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #hero .breadcrumbtxt a:hover {
+            color: #ffd700;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-organe {
+            color: orange;
+        }
+
+        .subheader {
+            color: #1e3c72;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+
+        .radius-lt {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .img-right img,
+        .img-left img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Slider Section */
+        .slick-slider {
+            margin-top: 2rem;
+        }
+
+        .carddes {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .carddes img {
+            margin-bottom: 1rem;
+        }
+
+        .carddes h4 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        /* Three Section */
+        .three-section h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        /* Why Choose Section */
+        .carddesign {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .carddesign img {
+            margin-bottom: 1rem;
+        }
+
+        .carddesign h4 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            background: orange;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 0.5rem;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* UX/UI Section */
+        .expertCol4 {
+            flex: 1;
+            margin: 0.5rem;
+        }
+
+        .expertBgDiv1 {
+            background: #f8f9fa;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .expertBgDiv1 img {
+            margin-bottom: 0.5rem;
+        }
+
+        .expertBgDiv1 h5 {
+            color: #1e3c72;
+        }
+
+        .expertsRow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .foohead4 {
+            font-weight: 700;
+            color: orange;
+            margin-bottom: 1rem;
+        }
+
+        .icons ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .icons a {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .icons a:hover {
+            color: #ffd700;
+        }
+
+        .second-footer {
+            padding-left: 40px;
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .whatsapp-button img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .copy {
+            background: #0f1e40;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            #hero h1 {
+                font-size: 2rem;
+            }
+
+            .second-footer {
+                padding-left: 0;
+            }
+
+            .expertsRow {
+                flex-direction: column;
+            }
+        }
+        #navMenu ul li a:hover {
+        color: #ffd700;
+      }
+
+    </style>
+</head>
+
+<body>
+    <!-- ✅ HEADER -->
+<header id="header">
+  <div class="header-container">
+    <div class="logo">
+      <!-- <img src="assets/logo.png" alt="Website Logo"> -->
+      <span class="site-name">Website Name</span>
+    </div>
+
+    <nav id="navMenu">
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="web-Designs.html">Web Design</a></li>
+        <li><a href="web-Development.html">Web Development</a></li>
+        <li><a href="digital-Marketing.html">Digital Marketing</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="visible">
+        <div class="hero-content">
+            <h1>Web Design Services</h1>
+            <div class="breadcrumbtxt"><a href="Index.html">Home</a> » <a href="#">Services</a> » Web Design Services
+            </div>
+        </div>
+    </section>
+    <!-- Three Section -->
+    <section id="three-section" class="visible">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="radius-lt img-left">
+                        <video autoplay muted loop playsinline style="width:100%; border-radius:10px;">
+                            <source src="assets/video2.mp4" type="video/mp4" alt="Does your business need professional web designers">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-duration="2000">
+                    <h3>Does your business need professional web designers?</h3>
+                    <p class="text-justify mt-3">As a business owner, you have to earn the trust of your customers. The
+                        general process of earning the trust of your customers starts with the first impression they get
+                        whenever they visit your website. Do you know " 94% of people tend not to trust a website with
+                        poor web design"?</p>
+                    <p class="text-justify">Now, a day's people don't like anything that looks outdated and boring, this
+                        will definitely discourage your visitors from even going through your website. That's the main
+                        reason why you need <b>expert web design services</b> on your job.</p>
+                    <p class="text-justify">The web designer's job is not just to create a website but to craft a
+                        visually stunning site with easy navigation so that it guarantees high conversion rates for the
+                        business.</p>
+                </div>
+                <div class="col-md-12" data-aos="fade-right">
+                    <p class="text-justify">At Website-Name, our <b>expert web designers</b> take care of the navigation
+                        aspects for your site. We work with understandable and efficient navigation bars and lists that
+                        make your visitor access your site easily. Not only that, a good designer has to take brand
+                        colors, imagery, logos and even catchphrases to create an attractive site.</p>
+                    <p class="text-justify">These band consistency tactics have a lot of weight when it comes to
+                        marketing campaigns. It's also crucial to attract customers towards your business. That's why
+                        your business needs an expert web design service like us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section id="why-choose" class="visible">
+        <div class="container pt-5 pb-5">
+            <h2 class="subheader mb-3 text-center">Why Choose <span class="text-organe">Website-Name for </span> your
+                Web Design Needs?</h2>
+            <div class="row mt-5">
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="carddesign">
+                        <img src="assets/Wiring with A Web Developer.gif" width="80" alt="Expertise">
+                        <h4>Expertise</h4>
+                        <p>With over a decade of experience in the digital marketing industry, Website-Name is renowned
+                            for delivering unparalleled results to clients across diverse industries.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="carddesign">
+                        <img src="assets/new/1.webp" width="80" alt="Ethical Approach">
+                        <h4>Ethical Approach</h4>
+                        <p>We uphold principles of integrity and honesty, ensuring that our services align with your
+                            business objectives and contribute to sustainable growth.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="carddesign">
+                        <img src="assets/new/2.gif" width="80" alt="Digital Marketing Prowess">
+                        <h4>Digital Marketing Prowess</h4>
+                        <p>Our comprehensive suite of digital marketing services, including SEO, PPC ads, eCommerce, and
+                            more, positions us as a one-stop solution for all your online marketing needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="2500">
+                    <div class="carddesign">
+                        <img src="assets/new/3.gif" width="80" alt="Customer-Centric Focus">
+                        <h4>Customer-Centric Focus</h4>
+                        <p>At Website-Name, we prioritize the needs and preferences of our clients, fostering close
+                            collaboration and providing transparent communication throughout the project lifecycle.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="tel:+918985431644" class="btn">Call Us Now</a>
+                <a href="Contact.html" class="btn">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- UX/UI Section -->
+    <section id="uxui" class="visible">
+        <div class="container mt-5 mb-5">
+            <h2 class="subheader mb-3">UX/UI <span class="text-organe"> Design Experts </span> - Key Players</h2>
+            <p>With the development of the internet industry,<b> UI and UX Experts</b> have become immensely popular.
+                While many confuse between the two, we have listed the key differences between UI and UX Experts below.
+            </p>
+            <h3 class="text-center">Key Roles of UI Experts</h3>
+            <div class="expertsRow">
+                <div class="expertCol4">
+                    <div class="expertPadd">
+                        <div class="expertBgDiv1">
+                            <img src="assets/new/png1.jpeg" width="40" alt="Interface design">
+                            <h5>Interface design</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="expertCol4">
+                    <div class="expertPadd">
+                        <div class="expertBgDiv1">
+                            <img src="assets/new/png2.png" width="40" alt="Prototyping design">
+                            <h5>Prototyping design</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="expertCol4">
+                    <div class="expertPadd">
+                        <div class="expertBgDiv1">
+                            <img src="assets/new/png3.jpeg" width="40" alt="User Testing">
+                            <h5>User Testing</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="expertCol4">
+                    <div class="expertPadd">
+                        <div class="expertBgDiv1">
+                            <img src="assets/new/png4.png" width="40" alt="Interactive design">
+                            <h5>Interactive design</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="expertsRow">
+                <div class="expertCol4">
+                    <div class="expertPadd">
+                        <div class="expertBgDiv1">
+                            <img src="assets/new/png5.jpeg" width="40" alt="Optimal design">
+                            <h5>Optimal design</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="expertCol4">
+                    <div class="expertPadd">
+                        <div class="expertBgDiv1">
+                            <img src="assets/new/png6.jpeg" width="40" alt="Requirement analysis">
+                            <h5>Requirement analysis</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="expertCol4">
+                    <div class="expertPadd">
+                        <div class="expertBgDiv1">
+                            <img src="assets/new/png7.jpeg" width="40" alt="Prototype design">
+                            <h5>Prototype design</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="expertCol4">
+                    <div class="expertPadd">
+                        <div class="expertBgDiv1">
+                            <img src="assets/new/png8.png" width="40" alt="Usability Testing">
+                            <h5>Usability Testing</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section id="main-content" class="visible">
+        <div class="container">
+            <div class="row" style="padding: 25px 0px;">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="2000">
+                    <div class="content">
+                        <h2 class="text-organe mb-3">Website <span class="subheader">Design Company </span> in India
+                        </h2>
+                        <p class="text-justify">Craft a custom site optimized for SEO and mobile with Website-Name. As
+                            one of India’s top web design firms, we blend technology and innovation to build stunning,
+                            responsive websites that capture attention, boost conversions, and help you achieve your
+                            business goals.</p>
+                        <p class="text-justify">In today’s digital world, superior web design not only reflects your
+                            brand but also drives growth. Website-Name excels at creating user-friendly websites
+                            tailored to your needs, helping you maximize ROI and expand your reach. Our team has
+                            successfully delivered projects for clients across India, the US, and the UK, ensuring every
+                            site we build is visually cohesive, easy to navigate, and aligned with your brand identity.
+                        </p>
+                        <p class="text-justify">As a dynamic, full-service digital marketing agency, Website-Name uses
+                            proven SEO, web design, and marketing strategies to generate real results—not illusions.
+                            Partner with us for a custom website that performs, built by a trusted Indian web design and
+                            development agency serving global markets.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="2000">
+                    <div class="radius-lt img-right">
+                        <video autoplay muted loop playsinline style="width:100%; border-radius:10px;">
+                            <source src="assets/video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Development Process Section -->
+    <section id="process" class="visible">
+        <div class="container pt-5 pb-5">
+            <h2 class="subheader mb-3 text-center">Our <span class="text-organe"> Web Development </span> Process</h2>
+            <div class="slick-slider">
+                <div>
+                    <div class="carddes">
+                        <div class="d-flex justify-content-center mb-3">
+                            <img src="assets/01.jpg" alt="Advanced Functionality"
+                                class="rounded-circle img-fluid border border-3 border-light shadow"
+                                style="width: 80px; height: 80px; object-fit: cover;">
+                        </div>
+                        <h4 class="fw-bold">Custom Website Design</h4>
+                        <p class="text-muted">At Website-Name, we create custom websites tailored to your business
+                            needs, using innovative
+                            designs to elevate your online presence.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="carddes">
+                        <div class="d-flex justify-content-center mb-3">
+                            <img src="assets/1000_F_621798686_UBj4sGOj3e1UGB97bFc1TgteHh7lJQcn.jpg"
+                                alt="Advanced Functionality"
+                                class="rounded-circle img-fluid border border-3 border-light shadow"
+                                style="width: 80px; height: 80px; object-fit: cover;">
+                        </div>
+                        <h4 class="fw-bold">Responsive Web Design</h4>
+                        <p class="text-muted">In today's digital landscape, our marketing firm emphasizes responsive
+                            design to ensure
+                            optimal user experience across all devices</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="carddes">
+                        <div class="d-flex justify-content-center mb-3">
+                            <img src="assets/2.jpg" alt="Advanced Functionality"
+                                class="rounded-circle img-fluid border border-3 border-light shadow"
+                                style="width: 80px; height: 80px; object-fit: cover;">
+                        </div>
+                        <h4 class="fw-bold">Search Engine Optimization</h4>
+                        <p class="text-muted">We craft visually captivating, SEO-optimized websites using cutting-edge
+                            techniques to ensure
+                            prominence in search engine results.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="carddes">
+                        <div class="d-flex justify-content-center mb-3">
+                            <img src="assets/digital.jpg" alt="Advanced Functionality"
+                                class="rounded-circle img-fluid border border-3 border-light shadow"
+                                style="width: 80px; height: 80px; object-fit: cover;">
+                        </div>
+                        <h4 class="fw-bold">Secure (HTTPS) Integration</h4>
+                        <p class="text-muted">We prioritize HTTPS integration for all websites to ensure secure
+                            connections and build trust
+                            in an era where online security is paramount.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="carddes">
+                        <div class="d-flex justify-content-center mb-3">
+                            <img src="assets/images.jpeg" alt="Advanced Functionality"
+                                class="rounded-circle img-fluid border border-3 border-light shadow"
+                                style="width: 80px; height: 80px; object-fit: cover;">
+                        </div>
+                        <h4 class="fw-bold">Professional Website Styling</h4>
+                        <p class="text-muted">We design websites that captivate your audience and reflect your brand
+                            through cohesive
+                            colors and compelling imagery.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="carddes text-center p-3">
+                        <div class="d-flex justify-content-center mb-3">
+                            <img src="assets/digital.jpg" alt="Advanced Functionality"
+                                class="rounded-circle img-fluid border border-3 border-light shadow"
+                                style="width: 80px; height: 80px; object-fit: cover;">
+                        </div>
+                        <h4 class="fw-bold">Advanced Functionality</h4>
+                        <p class="text-muted">
+                            We offer advanced features like eCommerce, database optimization, and custom solutions as a
+                            leading website development company.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>About Website Name</h5>
+                <p>Empowering businesses with AI-driven innovation and cutting-edge digital solutions since day one.</p>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#digital-marketing-grid">Marketing</a></li>
+                    <li><a href="#global">Global Presence</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Contact Info</h5>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@websitename.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Global Headquarters</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Follow Us</h5>
+                <div class="social-icons">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Website Name. All rights reserved. | Innovating Tomorrow, Today.</p>
+        </div>
+    </footer>
+    <!-- <footer>
+        <div class="container">
+            <div class="row pt-5 pb-5">
+                <div class="col-lg-3 text-center text-lg-left">
+                    <div class="content-1">
+                        <a href="Index.html"><img src="assets/img/vidhurslogo.png.png" alt="Website-Name Logo" style="width: 300px"></a>
+                        <h3 class="ftersci-heading">Follow Us</h3>
+                        <div class="icons">
+                            <ul class="d-flex d-lg-block justify-content-center">
+                                <li><a href="https://www.facebook.com/profile.php?id=61578984527241" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/Website-Namesofttechnologies/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <a href="https://www.freecounterstat.com" title="page counter"><img src="https://counter5.optistats.ovh/private/freecounterstat.php?c=gpbfqj2yxfakpms4krpt2brkbsb8d1fw" border="0" title="page counter" alt="page counter"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="box second-footer">
+                        <div class="foohead4">Company</div>
+                        <ul>
+                            <li><a href="Index.html">Home</a></li>
+                            <li><a href="/Contact.html">Contact Us</a></li>
+                            <li><a href="/DigitalMarketing.html">Digital Marketing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <div class="box">
+                        <div class="foohead4">Website Services</div>
+                        <ul>
+                            <li><a href="webdesign.html">Web Design</a></li>
+                            <li><a href="Development.html">Web Development</a></li>
+                            <li><a href="e-commerce.html">E-Commerce Website</a></li>
+                            <li><a href="customer.html">CRM System</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box" style="padding-left: 40px">
+                        <div class="foohead4">Get In Touch</div>
+                        <ul>
+                            <li>
+                                <p class="mt-0 text-white">xxxxxxxxxxx</p>
+                            </li>
+                            <li><a href="tel:+91 8985431644"><i class="fa fa-phone"></i> +91 xxxxxxxxx</a></li>
+                            <li><a href="tel:+91 8977636483"><i class="fa fa-phone"></i>+91 xxxxxxxxx</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>© 2025 <a href="#" style="text-decoration: none; color: white;">Website-Name </a> . All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="whatsapp-button" href="https://wa.me/918977636483?text=Hi%20Website-Name%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20services.%20Can%20you%20assist%20me%3F" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+        </a>
+    </footer> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        AOS.init();
+
+        // Sticky header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations for sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => observer.observe(section));
+
+        // Initialize Slick Slider
+        $(document).ready(function () {
+            $('.slick-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+    <script>
+  const navToggle = document.getElementById("navToggle");
+  const navMenu = document.getElementById("navMenu").querySelector("ul");
+
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+
+  // Optional: close menu when a link is clicked
+  navMenu.querySelectorAll("a").forEach(link =>
+    link.addEventListener("click", () => navMenu.classList.remove("show"))
+  );
+</script>
+</body>
+
+</html>
