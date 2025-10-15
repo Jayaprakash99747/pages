@@ -9,130 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/allpages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        /* ✅ Header Section */
-#header {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
-  width: 100%;
-  padding: 10px 40px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* ✅ Flex layout */
-.header-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* ✅ Logo + Site Name */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-right: 80px;
-}
-
-.logo img {
-  width: 45px;
-  height: 45px;
-  object-fit: contain;
-}
-
-.logo .site-name {
-  font-size: 1.6rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* ✅ Navigation Menu */
-#navMenu {
-  flex-grow: 1;
-}
-
-#navMenu ul {
-  display: flex;
-  justify-content: flex-start;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#navMenu ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-#navMenu ul li a:hover{
-  color: #ffd700;
-}
-
-/* ✅ Mobile Toggle Button */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-/* ✅ Mobile Responsive Styles */
-@media (max-width: 768px) {
-  #navMenu {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-  }
-
-  #navMenu ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 20px 0;
-  }
-
-  #navMenu ul.show {
-    display: flex;
-  }
-
-  .nav-toggle {
-    display: block;
-    margin-left: auto;
-  }
-}
-        /* Hero Section */
-        #hero {
-            max-width: 100%;
-            width: 100vw;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            overflow: hidden;
-            background: url('./assets/Website-designing-in-dehradun-1200x597.jpeg') center/cover no-repeat fixed;
-            height: 20vh !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -145,51 +23,109 @@
             color: #333;
         }
 
-        /* Header */
-        header {
+        /* ✅ Header Section */
+        #header {
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
-            padding: 1rem 0;
+            width: 100%;
+            padding: 10px 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s ease;
         }
 
-        header.scrolled {
+        #header.scrolled {
             background: rgba(30, 60, 114, 0.95);
             backdrop-filter: blur(10px);
         }
 
-        nav {
+        .header-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .nav-links {
             display: flex;
-            list-style: none;
-            gap: 2rem;
+            align-items: center;
+            gap: 12px;
+            margin-right: 80px;
         }
 
-        .nav-links a {
+        .logo img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+
+        .logo .site-name {
+            font-size: 1.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        #navMenu {
+            flex-grow: 1;
+        }
+
+        #navMenu ul {
+            display: flex;
+            justify-content: flex-start;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navMenu ul li a {
             color: white;
             text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
+        #navMenu ul li a:hover {
             color: #ffd700;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            #navMenu {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, #1e3c72, #2a5298);
+            }
+
+            #navMenu ul {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                padding: 20px 0;
+            }
+
+            #navMenu ul.show {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+                margin-left: auto;
+            }
         }
 
         /* Hero Section */
@@ -200,17 +136,13 @@
             padding: 0;
             position: relative;
             overflow: hidden;
-            background: url('./assets/01.jpg') center/cover no-repeat fixed;
-            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200') center/cover no-repeat;
+            height: 20vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-        }
-
-        #hero .hero-content {
-            z-index: 2;
         }
 
         #hero h1 {
@@ -246,9 +178,9 @@
             }
         }
 
-        /* Sections */
+        /* ✅ FIXED: Sections spacing */
         section {
-            padding: 80px 2rem;
+            padding: 30px 2rem;
             max-width: 1200px;
             margin: 0 auto;
             opacity: 0;
@@ -279,9 +211,12 @@
         }
 
         .img-right img,
-        .img-left img {
+        .img-left img,
+        .img-right video,
+        .img-left video {
             width: 100%;
             height: auto;
+            border-radius: 10px;
         }
 
         /* Slider Section */
@@ -296,6 +231,7 @@
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             height: 100%;
+            margin: 0 10px;
         }
 
         .carddes img {
@@ -340,17 +276,20 @@
             border-radius: 5px;
             margin: 0 0.5rem;
             display: inline-block;
+            transition: transform 0.3s;
         }
 
         .btn:hover {
             color: white;
             text-decoration: none;
+            transform: translateY(-2px);
         }
 
         /* UX/UI Section */
         .expertCol4 {
             flex: 1;
             margin: 0.5rem;
+            min-width: 200px;
         }
 
         .expertBgDiv1 {
@@ -375,114 +314,139 @@
         }
 
         /* Footer */
-        footer {
-            background: #1e3c72;
+        #footer {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
-            padding: 2rem 0;
+            padding: 40px 20px 20px;
+            margin-top: 0;
         }
 
-        .foohead4 {
-            font-weight: 700;
-            color: orange;
-            margin-bottom: 1rem;
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 30px;
         }
 
-        .icons ul {
+        .footer-section h5 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
             list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
+            padding: 0;
         }
 
-        .icons a {
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
             color: white;
-            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
-        .icons a:hover {
+        .footer-section a:hover {
             color: #ffd700;
         }
 
-        .second-footer {
-            padding-left: 40px;
-        }
-
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            padding: 15px 15px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            z-index: 999;
-        }
-
-        .whatsapp-button img {
+        .social-icons a {
+            display: inline-block;
             width: 40px;
             height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: background 0.3s;
         }
 
-        .copy {
-            background: #0f1e40;
-            padding: 1rem 0;
+        .social-icons a:hover {
+            background: #ffd700;
+            color: #1e3c72;
+        }
+
+        .footer-bottom {
             text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            color: white;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
             #hero h1 {
                 font-size: 2rem;
-            }
-
-            .second-footer {
-                padding-left: 0;
             }
 
             .expertsRow {
                 flex-direction: column;
             }
-        }
-        #navMenu ul li a:hover {
-        color: #ffd700;
-      }
 
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <!-- ✅ HEADER -->
-<header id="header">
-  <div class="header-container">
-    <div class="logo">
-      <!-- <img src="assets/logo.png" alt="Website Logo"> -->
-      <span class="site-name">Website Name</span>
-    </div>
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="site-name">Website Name</span>
+            </div>
 
-    <nav id="navMenu">
-      <ul>
-        <li><a href="Index.html">Home</a></li>
-        <li><a href="web-Designs.html">Web Design</a></li>
-        <li><a href="web-Development.html">Web Development</a></li>
-        <li><a href="digital-Marketing.html">Digital Marketing</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="web-Designs.html" class="active">Web Design</a></li>
+                    <li><a href="web-Development.html">Web Development</a></li>
+                    <li><a href="digital-Marketing.html">Digital Marketing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-    <button class="nav-toggle" id="navToggle">
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
-</header>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section id="hero" class="visible">
@@ -492,6 +456,7 @@
             </div>
         </div>
     </section>
+
     <!-- Three Section -->
     <section id="three-section" class="visible">
         <div class="container">
@@ -499,7 +464,8 @@
                 <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
                     <div class="radius-lt img-left">
                         <video autoplay muted loop playsinline style="width:100%; border-radius:10px;">
-                            <source src="assets/video2.mp4" type="video/mp4" alt="Does your business need professional web designers">
+                            <source src="assets/video2.mp4" type="video/mp4"
+                                alt="Does your business need professional web designers">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -532,10 +498,10 @@
 
     <!-- Why Choose Section -->
     <section id="why-choose" class="visible">
-        <div class="container pt-5 pb-5">
+        <div class="container">
             <h2 class="subheader mb-3 text-center">Why Choose <span class="text-organe">Website-Name for </span> your
                 Web Design Needs?</h2>
-            <div class="row mt-5">
+            <div class="row mt-4">
                 <div class="col-md-6" data-aos="fade-up" data-aos-duration="2500">
                     <div class="carddesign">
                         <img src="assets/Wiring with A Web Developer.gif" width="80" alt="Expertise">
@@ -569,7 +535,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center">
+            <div class="text-center mt-3">
                 <a href="tel:+918985431644" class="btn">Call Us Now</a>
                 <a href="Contact.html" class="btn">Request a Quote</a>
             </div>
@@ -578,12 +544,12 @@
 
     <!-- UX/UI Section -->
     <section id="uxui" class="visible">
-        <div class="container mt-5 mb-5">
+        <div class="container">
             <h2 class="subheader mb-3">UX/UI <span class="text-organe"> Design Experts </span> - Key Players</h2>
             <p>With the development of the internet industry,<b> UI and UX Experts</b> have become immensely popular.
                 While many confuse between the two, we have listed the key differences between UI and UX Experts below.
             </p>
-            <h3 class="text-center">Key Roles of UI Experts</h3>
+            <h3 class="text-center mt-4">Key Roles of UI Experts</h3>
             <div class="expertsRow">
                 <div class="expertCol4">
                     <div class="expertPadd">
@@ -658,16 +624,16 @@
     <!-- Main Content Section -->
     <section id="main-content" class="visible">
         <div class="container">
-            <div class="row" style="padding: 25px 0px;">
+            <div class="row">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="2000">
                     <div class="content">
                         <h2 class="text-organe mb-3">Website <span class="subheader">Design Company </span> in India
                         </h2>
                         <p class="text-justify">Craft a custom site optimized for SEO and mobile with Website-Name. As
-                            one of India’s top web design firms, we blend technology and innovation to build stunning,
+                            one of India's top web design firms, we blend technology and innovation to build stunning,
                             responsive websites that capture attention, boost conversions, and help you achieve your
                             business goals.</p>
-                        <p class="text-justify">In today’s digital world, superior web design not only reflects your
+                        <p class="text-justify">In today's digital world, superior web design not only reflects your
                             brand but also drives growth. Website-Name excels at creating user-friendly websites
                             tailored to your needs, helping you maximize ROI and expand your reach. Our team has
                             successfully delivered projects for clients across India, the US, and the UK, ensuring every
@@ -693,7 +659,7 @@
 
     <!-- Web Development Process Section -->
     <section id="process" class="visible">
-        <div class="container pt-5 pb-5">
+        <div class="container">
             <h2 class="subheader mb-3 text-center">Our <span class="text-organe"> Web Development </span> Process</h2>
             <div class="slick-slider">
                 <div>
@@ -705,8 +671,7 @@
                         </div>
                         <h4 class="fw-bold">Custom Website Design</h4>
                         <p class="text-muted">At Website-Name, we create custom websites tailored to your business
-                            needs, using innovative
-                            designs to elevate your online presence.</p>
+                            needs, using innovative designs to elevate your online presence.</p>
                     </div>
                 </div>
                 <div>
@@ -719,8 +684,7 @@
                         </div>
                         <h4 class="fw-bold">Responsive Web Design</h4>
                         <p class="text-muted">In today's digital landscape, our marketing firm emphasizes responsive
-                            design to ensure
-                            optimal user experience across all devices</p>
+                            design to ensure optimal user experience across all devices</p>
                     </div>
                 </div>
                 <div>
@@ -732,8 +696,7 @@
                         </div>
                         <h4 class="fw-bold">Search Engine Optimization</h4>
                         <p class="text-muted">We craft visually captivating, SEO-optimized websites using cutting-edge
-                            techniques to ensure
-                            prominence in search engine results.</p>
+                            techniques to ensure prominence in search engine results.</p>
                     </div>
                 </div>
                 <div>
@@ -745,8 +708,7 @@
                         </div>
                         <h4 class="fw-bold">Secure (HTTPS) Integration</h4>
                         <p class="text-muted">We prioritize HTTPS integration for all websites to ensure secure
-                            connections and build trust
-                            in an era where online security is paramount.</p>
+                            connections and build trust in an era where online security is paramount.</p>
                     </div>
                 </div>
                 <div>
@@ -758,8 +720,7 @@
                         </div>
                         <h4 class="fw-bold">Professional Website Styling</h4>
                         <p class="text-muted">We design websites that captivate your audience and reflect your brand
-                            through cohesive
-                            colors and compelling imagery.</p>
+                            through cohesive colors and compelling imagery.</p>
                     </div>
                 </div>
                 <div>
@@ -770,19 +731,14 @@
                                 style="width: 80px; height: 80px; object-fit: cover;">
                         </div>
                         <h4 class="fw-bold">Advanced Functionality</h4>
-                        <p class="text-muted">
-                            We offer advanced features like eCommerce, database optimization, and custom solutions as a
-                            leading website development company.
-                        </p>
+                        <p class="text-muted">We offer advanced features like eCommerce, database optimization, and
+                            custom solutions as a leading website development company.</p>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Footer -->
     <!-- Footer -->
     <footer id="footer">
         <div class="footer-content">
@@ -821,70 +777,12 @@
             <p>&copy; 2025 Website Name. All rights reserved. | Innovating Tomorrow, Today.</p>
         </div>
     </footer>
-    <!-- <footer>
-        <div class="container">
-            <div class="row pt-5 pb-5">
-                <div class="col-lg-3 text-center text-lg-left">
-                    <div class="content-1">
-                        <a href="Index.html"><img src="assets/img/vidhurslogo.png.png" alt="Website-Name Logo" style="width: 300px"></a>
-                        <h3 class="ftersci-heading">Follow Us</h3>
-                        <div class="icons">
-                            <ul class="d-flex d-lg-block justify-content-center">
-                                <li><a href="https://www.facebook.com/profile.php?id=61578984527241" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="https://www.instagram.com/Website-Namesofttechnologies/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                        <a href="https://www.freecounterstat.com" title="page counter"><img src="https://counter5.optistats.ovh/private/freecounterstat.php?c=gpbfqj2yxfakpms4krpt2brkbsb8d1fw" border="0" title="page counter" alt="page counter"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3">
-                    <div class="box second-footer">
-                        <div class="foohead4">Company</div>
-                        <ul>
-                            <li><a href="Index.html">Home</a></li>
-                            <li><a href="/Contact.html">Contact Us</a></li>
-                            <li><a href="/DigitalMarketing.html">Digital Marketing</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3">
-                    <div class="box">
-                        <div class="foohead4">Website Services</div>
-                        <ul>
-                            <li><a href="webdesign.html">Web Design</a></li>
-                            <li><a href="Development.html">Web Development</a></li>
-                            <li><a href="e-commerce.html">E-Commerce Website</a></li>
-                            <li><a href="customer.html">CRM System</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="box" style="padding-left: 40px">
-                        <div class="foohead4">Get In Touch</div>
-                        <ul>
-                            <li>
-                                <p class="mt-0 text-white">xxxxxxxxxxx</p>
-                            </li>
-                            <li><a href="tel:+91 8985431644"><i class="fa fa-phone"></i> +91 xxxxxxxxx</a></li>
-                            <li><a href="tel:+91 8977636483"><i class="fa fa-phone"></i>+91 xxxxxxxxx</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copy">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>© 2025 <a href="#" style="text-decoration: none; color: white;">Website-Name </a> . All rights reserved</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="whatsapp-button" href="https://wa.me/918977636483?text=Hi%20Website-Name%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20services.%20Can%20you%20assist%20me%3F" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
-        </a>
-    </footer> -->
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918977636483?text=Hi%20Website-Name%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20services.%20Can%20you%20assist%20me%3F"
+        class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -920,6 +818,18 @@
         const sections = document.querySelectorAll('section');
         sections.forEach(section => observer.observe(section));
 
+        // Mobile menu toggle
+        const navToggle = document.getElementById("navToggle");
+        const navMenu = document.getElementById("navMenu").querySelector("ul");
+
+        navToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+        });
+
+        navMenu.querySelectorAll("a").forEach(link =>
+            link.addEventListener("click", () => navMenu.classList.remove("show"))
+        );
+
         // Initialize Slick Slider
         $(document).ready(function () {
             $('.slick-slider').slick({
@@ -940,19 +850,6 @@
             });
         });
     </script>
-    <script>
-  const navToggle = document.getElementById("navToggle");
-  const navMenu = document.getElementById("navMenu").querySelector("ul");
-
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-  });
-
-  // Optional: close menu when a link is clicked
-  navMenu.querySelectorAll("a").forEach(link =>
-    link.addEventListener("click", () => navMenu.classList.remove("show"))
-  );
-</script>
 </body>
 
 </html>
