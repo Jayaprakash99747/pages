@@ -9,56 +9,57 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/allpages.css">
     <style>
-        /* ✅ Header Section */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+    /* ✅ HEADER */
 #header {
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: white;
   width: 100%;
-  padding: 10px 40px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: fixed;
   top: 0;
   z-index: 1000;
 }
 
-/* ✅ Flex layout */
 .header-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* ✅ Logo + Site Name */
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-right: 80px;
-}
+        display: flex;
+        align-items: center;
+        gap: 12px; /* gap between logo and name */
+        margin-right: 80px; /* ✅ adds space after the name before nav starts */
+      }
 
-.logo img {
-  width: 45px;
-  height: 45px;
-  object-fit: contain;
-}
+      .logo img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+      }
 
 .logo .site-name {
-  font-size: 1.6rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
 
-/* ✅ Navigation Menu */
-#navMenu {
-  flex-grow: 1;
-}
-
+/* ✅ Desktop Navigation */
 #navMenu ul {
   display: flex;
   justify-content: flex-start;
@@ -75,11 +76,11 @@
   transition: color 0.3s ease;
 }
 
-#navMenu ul li a:hover{
+#navMenu ul li a:hover {
   color: #ffd700;
 }
 
-/* ✅ Mobile Toggle Button */
+/* ✅ Mobile toggle button */
 .nav-toggle {
   display: none;
   background: none;
@@ -93,29 +94,45 @@
 @media (max-width: 768px) {
   #navMenu {
     position: absolute;
-    top: 70px;
+    top: 60px;
     left: 0;
     width: 100%;
     background: linear-gradient(135deg, #1e3c72, #2a5298);
+    border-top: 5px solid #fff;
   }
 
   #navMenu ul {
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 1.2rem;
     padding: 20px 0;
+    text-align: center; /* ✅ centers the text */
+    width: 100%;
   }
 
   #navMenu ul.show {
     display: flex;
   }
 
+  #navMenu ul li {
+    width: 100%;
+  }
+
+  #navMenu ul li a {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    text-align: center; /* ✅ centers link text */
+    padding: 1px 0;
+  }
+
   .nav-toggle {
     display: block;
-    margin-left: auto;
   }
 }
+
         /* Hero Section */
         #hero {
             max-width: 100%;
@@ -243,6 +260,63 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        /* Completely control section spacing */
+        section {
+            padding-top: 25px !important;
+            padding-bottom: 25px !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        /* Remove extra spacing from Bootstrap containers, rows, and columns */
+        .container,
+        .row,
+        .col,
+        div[class*="col-"] {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        /* Keep a small, clean visual gap between sections */
+        section + section {
+            margin-top: 15px !important;
+        }
+
+        /* Prevent any global body/HTML padding from adding space */
+        html, body {
+            padding: 0 !important;
+            margin: 0 !important;
+            overflow-x: hidden;
+        }
+
+        /* Mobile view fix for process section */
+        @media (max-width: 768px) {
+            #process .slick-slider,
+            #process .slick-list,
+            #process .slick-track,
+            #process .slick-slide {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            #process .slick-slide > div {
+                margin: 0 !important;
+            }
+
+            #process .slick-dots {
+                margin: 10px 0 0 0 !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #process .container {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
             }
         }
 
@@ -379,6 +453,7 @@
             background: #1e3c72;
             color: white;
             padding: 2rem 0;
+            margin-top: 0 !important; /* Ensure no extra margin before footer */
         }
 
         .foohead4 {
@@ -434,6 +509,12 @@
             text-align: center;
         }
 
+        /* Reduce gap between last section and footer */
+        #process {
+            margin-bottom: 0 !important;
+            padding-bottom: 1rem !important; /* Reduced padding */
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
@@ -452,37 +533,189 @@
                 flex-direction: column;
             }
         }
-        #navMenu ul li a:hover {
-        color: #ffd700;
-      }
+        .img-left video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* ensures video fills container */
+    border-radius: 10px;     /* keep smooth corners */
+    display: block;
+}
 
     </style>
+    <style>
+    /* --- Unified Card Style for Alignment --- */
+    #three-section {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      background: #f4f6f9;
+    }
+
+    #three-section .card-wrapper {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 1200px;       /* matches your other cards container width */
+      width: 100%;
+      margin: 0 auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Subtle hover effect for consistency with other cards */
+    #three-section .card-wrapper:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    #three-section .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin: 0;
+    }
+
+    #three-section .col-md-6 {
+      flex: 1 1 50%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* --- Video Styling --- */
+    #three-section .img-left {
+      width: 100%;
+      height: 80%;
+      overflow: hidden;
+    }
+
+    #three-section .img-left video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    /* Add a soft zoom effect on hover */
+    #three-section .card-wrapper:hover video {
+      transform: scale(1.05);
+    }
+
+    /* --- Text Section --- */
+    #three-section .text-content {
+      padding: 50px 40px;
+    }
+
+    #three-section h3 {
+      font-size: 1.9rem;
+      color: #1e3c72;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    #three-section p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #333;
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+
+    /* --- Responsive Fixes --- */
+    @media (max-width: 992px) {
+      #three-section .col-md-6 {
+        flex: 1 1 100%;
+      }
+
+      #three-section .img-left video {
+        height: 260px;
+      }
+
+      #three-section .text-content {
+        padding: 25px 20px;
+      }
+    }
+
+    /* Match spacing between cards */
+    section + section {
+      margin-top: 30px;
+    }
+    /* Floating WhatsApp Button - Left */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 80px; /* move it up */
+  left: 40px; /* move it inside from left */
+  background: linear-gradient(to bottom, #8b0000, #330000); /* Red */
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to bottom, #8b0000, #330000); /* Darker red */
+}
+
+.whatsapp-float i {
+  margin-top: 2px;
+}
+
+/* Responsive (for mobile) */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    bottom: 60px; /* slightly higher on mobile */
+    left: 25px; /* not hugging the edge */
+  }
+}
+
+/* Default: hidden on larger screens */
+#callnowbutton {
+  display: none;
+}
+
+  </style>
+
 </head>
 
 <body>
-    <!-- ✅ HEADER -->
-<header id="header">
-  <div class="header-container">
-    <div class="logo">
-      <!-- <img src="assets/logo.png" alt="Website Logo"> -->
-      <span class="site-name">Website Name</span>
-    </div>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="header-container">
+          <div class="logo">
+            <!-- <img src="assets/logo.png" alt="Website Logo"> -->
+            <span class="site-name">Website Name</span>
+          </div>
 
-    <nav id="navMenu">
-      <ul>
-        <li><a href="Index.html">Home</a></li>
-        <li><a href="web-Designs.html">Web Design</a></li>
-        <li><a href="web-Development.html">Web Development</a></li>
-        <li><a href="digital-Marketing.html">Digital Marketing</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
+          <nav id="navMenu">
+            <ul>
+              <li><a href="Index.html">Home</a></li>
+              <li><a href="web-Designs.html">Web Design</a></li>
+              <li><a href="web-Development.html">Web Development</a></li>
+              <li><a href="digital-Marketing.html">Digital Marketing</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
 
-    <button class="nav-toggle" id="navToggle">
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
-</header>
+          <button class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </header>
 
     <!-- Hero Section -->
     <section id="hero" class="visible">
@@ -493,42 +726,37 @@
         </div>
     </section>
     <!-- Three Section -->
-    <section id="three-section" class="visible">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
-                    <div class="radius-lt img-left">
-                        <video autoplay muted loop playsinline style="width:100%; border-radius:10px;">
-                            <source src="assets/video2.mp4" type="video/mp4" alt="Does your business need professional web designers">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-left" data-aos-duration="2000">
-                    <h3>Does your business need professional web designers?</h3>
-                    <p class="text-justify mt-3">As a business owner, you have to earn the trust of your customers. The
-                        general process of earning the trust of your customers starts with the first impression they get
-                        whenever they visit your website. Do you know " 94% of people tend not to trust a website with
-                        poor web design"?</p>
-                    <p class="text-justify">Now, a day's people don't like anything that looks outdated and boring, this
-                        will definitely discourage your visitors from even going through your website. That's the main
-                        reason why you need <b>expert web design services</b> on your job.</p>
-                    <p class="text-justify">The web designer's job is not just to create a website but to craft a
-                        visually stunning site with easy navigation so that it guarantees high conversion rates for the
-                        business.</p>
-                </div>
-                <div class="col-md-12" data-aos="fade-right">
-                    <p class="text-justify">At Website-Name, our <b>expert web designers</b> take care of the navigation
-                        aspects for your site. We work with understandable and efficient navigation bars and lists that
-                        make your visitor access your site easily. Not only that, a good designer has to take brand
-                        colors, imagery, logos and even catchphrases to create an attractive site.</p>
-                    <p class="text-justify">These band consistency tactics have a lot of weight when it comes to
-                        marketing campaigns. It's also crucial to attract customers towards your business. That's why
-                        your business needs an expert web design service like us.</p>
-                </div>
-            </div>
+    <!-- Three Section -->
+<section id="three-section" style="padding:60px 0; background:#f4f6f9;">
+  
+  <div class="card-wrapper">
+    <div class="row">
+      <!-- Left Video -->
+      <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
+        <div class="img-left">
+          <video autoplay muted loop playsinline>
+            <source src="assets/video2.mp4" type="video/mp4" alt="Does your business need professional web designers">
+            Your browser does not support the video tag.
+          </video>
         </div>
-    </section>
+      </div>
+
+      <!-- Right Text -->
+      <div class="col-md-6 text-content" data-aos="fade-left" data-aos-duration="2000">
+        <h3>Does your business need professional web designers?</h3>
+        <p>As a business owner, you have to earn the trust of your customers. The general process of earning the trust of your customers starts with the first impression they get whenever they visit your website. Do you know "94% of people tend not to trust a website with poor web design"?</p>
+        <p>Nowadays people don't like anything that looks outdated and boring. This will definitely discourage your visitors from even going through your website. That's the main reason why you need <b>expert web design services</b> for your business.</p>
+        <p>The web designer's job is not just to create a website but to craft a visually stunning site with easy navigation so that it guarantees high conversion rates for the business.</p>
+      </div>
+
+      <!-- Bottom Full Width Paragraph -->
+      <div class="col-md-12 text-content" data-aos="fade-right" data-aos-duration="2000">
+        <p>At Website-Name, our <b>expert web designers</b> take care of the navigation aspects for your site. We work with understandable and efficient navigation bars and lists that make your visitors access your site easily. Not only that, a good designer has to take brand colors, imagery, logos and even catchphrases to create an attractive site.</p>
+        <p>These brand consistency tactics have a lot of weight when it comes to marketing campaigns. It's also crucial to attract customers towards your business. That's why your business needs an expert web design service like us.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Why Choose Section -->
     <section id="why-choose" class="visible">
@@ -681,10 +909,10 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-duration="2000">
                     <div class="radius-lt img-right">
-                        <video autoplay muted loop playsinline style="width:100%; border-radius:10px;">
-                            <source src="assets/video1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <video autoplay muted loop playsinline>
+            <source src="assets/video2.mp4" type="video/mp4" alt="Does your business need professional web designers">
+            Your browser does not support the video tag.
+          </video>
                     </div>
                 </div>
             </div>
@@ -692,8 +920,8 @@
     </section>
 
     <!-- Web Development Process Section -->
-    <section id="process" class="visible">
-        <div class="container pt-5 pb-5">
+    <!-- <section id="process" class="visible">
+        <div class="container pt-5 pb-2"> 
             <h2 class="subheader mb-3 text-center">Our <span class="text-organe"> Web Development </span> Process</h2>
             <div class="slick-slider">
                 <div>
@@ -775,14 +1003,11 @@
                             leading website development company.
                         </p>
                     </div>
-
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-
-    <!-- Footer -->
     <!-- Footer -->
     <footer id="footer">
         <div class="footer-content">
@@ -820,71 +1045,13 @@
         <div class="footer-bottom">
             <p>&copy; 2025 Website Name. All rights reserved. | Innovating Tomorrow, Today.</p>
         </div>
+        <a href="https://wa.me/" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+91 " id="callnowbutton">
+      <i class="fas fa-phone-alt"></i> Donate Now
+    </a>
     </footer>
-    <!-- <footer>
-        <div class="container">
-            <div class="row pt-5 pb-5">
-                <div class="col-lg-3 text-center text-lg-left">
-                    <div class="content-1">
-                        <a href="Index.html"><img src="assets/img/vidhurslogo.png.png" alt="Website-Name Logo" style="width: 300px"></a>
-                        <h3 class="ftersci-heading">Follow Us</h3>
-                        <div class="icons">
-                            <ul class="d-flex d-lg-block justify-content-center">
-                                <li><a href="https://www.facebook.com/profile.php?id=61578984527241" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="https://www.instagram.com/Website-Namesofttechnologies/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                        <a href="https://www.freecounterstat.com" title="page counter"><img src="https://counter5.optistats.ovh/private/freecounterstat.php?c=gpbfqj2yxfakpms4krpt2brkbsb8d1fw" border="0" title="page counter" alt="page counter"></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3">
-                    <div class="box second-footer">
-                        <div class="foohead4">Company</div>
-                        <ul>
-                            <li><a href="Index.html">Home</a></li>
-                            <li><a href="/Contact.html">Contact Us</a></li>
-                            <li><a href="/DigitalMarketing.html">Digital Marketing</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3">
-                    <div class="box">
-                        <div class="foohead4">Website Services</div>
-                        <ul>
-                            <li><a href="webdesign.html">Web Design</a></li>
-                            <li><a href="Development.html">Web Development</a></li>
-                            <li><a href="e-commerce.html">E-Commerce Website</a></li>
-                            <li><a href="customer.html">CRM System</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="box" style="padding-left: 40px">
-                        <div class="foohead4">Get In Touch</div>
-                        <ul>
-                            <li>
-                                <p class="mt-0 text-white">xxxxxxxxxxx</p>
-                            </li>
-                            <li><a href="tel:+91 8985431644"><i class="fa fa-phone"></i> +91 xxxxxxxxx</a></li>
-                            <li><a href="tel:+91 8977636483"><i class="fa fa-phone"></i>+91 xxxxxxxxx</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copy">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>© 2025 <a href="#" style="text-decoration: none; color: white;">Website-Name </a> . All rights reserved</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="whatsapp-button" href="https://wa.me/918977636483?text=Hi%20Website-Name%2C%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20services.%20Can%20you%20assist%20me%3F" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
-        </a>
-    </footer> -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -939,20 +1106,28 @@
                 ]
             });
         });
+
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.querySelector('#navMenu ul');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Close menu when a link is clicked
+        navMenu.querySelectorAll('a').forEach(link =>
+            link.addEventListener('click', () => navMenu.classList.remove('show'))
+        );
+
+        // Adjust slick slider spacing on load
+        $(window).on('load', function() {
+            $('#process .slick-slider, #process .slick-track, #process .slick-list').css({
+                'margin-bottom': '0',
+                'padding-bottom': '0'
+            });
+        });
     </script>
-    <script>
-  const navToggle = document.getElementById("navToggle");
-  const navMenu = document.getElementById("navMenu").querySelector("ul");
-
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-  });
-
-  // Optional: close menu when a link is clicked
-  navMenu.querySelectorAll("a").forEach(link =>
-    link.addEventListener("click", () => navMenu.classList.remove("show"))
-  );
-</script>
 </body>
 
 </html>
